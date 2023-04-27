@@ -1,6 +1,6 @@
 # example
 
-A new Flutter project.
+Example project containing the JoystickView()
 
 ## Getting Started
 
