@@ -1,7 +1,7 @@
 name: control_pad_plus
-description: A new Flutter package project.
+description: A null safe version of the control_pad package.
 version: 0.0.1
-homepage:
+homepage: https://github.com/ZM009/control_pad_plus
 
 environment:
   sdk: '>=2.19.3 <3.0.0'
@@ -12,6 +12,7 @@ dependencies:
     sdk: flutter
 
 dev_dependencies:
+  pedantic: ^1.0.0
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
