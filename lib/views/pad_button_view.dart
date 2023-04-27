@@ -95,38 +95,38 @@ class PadbuttonsView extends StatelessWidget {
       child: StatefulBuilder(builder: (context, setState) {
         return GestureDetector(
           onTap: () {
-            _processGesture(padButton, Gestures.TAP);
+            _processGesture(padButton, Gestures.tap);
           },
           onTapUp: (details) {
-            _processGesture(padButton, Gestures.TAPUP);
+            _processGesture(padButton, Gestures.tapUp);
             Future.delayed(const Duration(milliseconds: 50), () {
               setState(() => buttonsStateMap![padButton.index!] =
                   padButton.backgroundColor!);
             });
           },
           onTapDown: (details) {
-            _processGesture(padButton, Gestures.TAPDOWN);
+            _processGesture(padButton, Gestures.tapDown);
 
             setState(() =>
                 buttonsStateMap![padButton.index!] = padButton.pressedColor!);
           },
           onTapCancel: () {
-            _processGesture(padButton, Gestures.TAPCANCEL);
+            _processGesture(padButton, Gestures.tapCancel);
 
             setState(() => buttonsStateMap![padButton.index!] =
                 padButton.backgroundColor!);
           },
           onLongPress: () {
-            _processGesture(padButton, Gestures.LONGPRESS);
+            _processGesture(padButton, Gestures.longPress);
           },
           onLongPressStart: (details) {
-            _processGesture(padButton, Gestures.LONGPRESSSTART);
+            _processGesture(padButton, Gestures.longPressStart);
 
             setState(() =>
                 buttonsStateMap![padButton.index!] = padButton.pressedColor!);
           },
           onLongPressUp: () {
-            _processGesture(padButton, Gestures.LONGPRESSUP);
+            _processGesture(padButton, Gestures.longPressUp);
 
             setState(() => buttonsStateMap![padButton.index!] =
                 padButton.backgroundColor!);
