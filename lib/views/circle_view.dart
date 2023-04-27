@@ -29,7 +29,14 @@ class CircleView extends StatelessWidget {
     return Container(
       width: size,
       height: size,
+      decoration: BoxDecoration(
+        color: color,
+        shape: BoxShape.circle,
+        border: border,
+        boxShadow: boxShadow,
+      ),
       child: Center(
+        // ignore: prefer_if_null_operators
         child: buttonIcon != null
             ? buttonIcon
             : (buttonImage != null)
@@ -37,12 +44,6 @@ class CircleView extends StatelessWidget {
                 : (buttonText != null)
                     ? Text(buttonText!)
                     : null,
-      ),
-      decoration: BoxDecoration(
-        color: color,
-        shape: BoxShape.circle,
-        border: border,
-        boxShadow: boxShadow,
       ),
     );
   }

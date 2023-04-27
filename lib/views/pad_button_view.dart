@@ -38,10 +38,10 @@ class PadbuttonsView extends StatelessWidget {
   PadbuttonsView({
     this.size,
     this.buttons = const [
-      PadButtonItem(index: 0, buttonText: "A"),
-      PadButtonItem(index: 1, buttonText: "B", pressedColor: Colors.red),
-      PadButtonItem(index: 2, buttonText: "C", pressedColor: Colors.green),
-      PadButtonItem(index: 3, buttonText: "D", pressedColor: Colors.yellow),
+      PadButtonItem(index: 0, buttonText: 'A'),
+      PadButtonItem(index: 1, buttonText: 'B', pressedColor: Colors.red),
+      PadButtonItem(index: 2, buttonText: 'C', pressedColor: Colors.green),
+      PadButtonItem(index: 3, buttonText: 'D', pressedColor: Colors.yellow),
     ],
     this.padButtonPressedCallback,
     this.buttonsPadding = 0,
@@ -53,12 +53,11 @@ class PadbuttonsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double? actualSize = size != null
-        ? size
-        : _math.min(MediaQuery.of(context).size.width,
+    double? actualSize = size ??
+        _math.min(MediaQuery.of(context).size.width,
                 MediaQuery.of(context).size.height) *
             0.5;
-    double? innerCircleSize = actualSize! / 3;
+    double? innerCircleSize = actualSize / 3;
 
     return Center(
         child: Stack(children: createButtons(innerCircleSize, actualSize)));
@@ -66,7 +65,7 @@ class PadbuttonsView extends StatelessWidget {
 
   List<Widget> createButtons(double innerCircleSize, double actualSize) {
     /// [list] uses the literal instead of constructor due to null-safety
-    List<Widget> list = [];
+    List<Widget>? list = [];
     list.add(CircleView.padBackgroundCircle(
         actualSize,
         backgroundPadButtonsColor,
@@ -92,7 +91,8 @@ class PadbuttonsView extends StatelessWidget {
   Positioned createPositionedButtons(PadButtonItem padButton, double actualSize,
       int index, double innerCircleSize) {
     return Positioned(
-      // ignore: sort_child_properties_last
+      top: _calculatePositionYOfButton(index, innerCircleSize, actualSize),
+      left: _calculatePositionXOfButton(index, innerCircleSize, actualSize),
       child: StatefulBuilder(builder: (context, setState) {
         return GestureDetector(
           onTap: () {
@@ -143,8 +143,6 @@ class PadbuttonsView extends StatelessWidget {
           ),
         );
       }),
-      top: _calculatePositionYOfButton(index, innerCircleSize, actualSize),
-      left: _calculatePositionXOfButton(index, innerCircleSize, actualSize),
     );
   }
 
@@ -152,14 +150,14 @@ class PadbuttonsView extends StatelessWidget {
     if (padButtonPressedCallback != null &&
         button.supportedGestures.contains(gesture)) {
       padButtonPressedCallback!(button.index!, gesture);
-      debugPrint("$gesture padbutton id = ${[button.index]}");
+      debugPrint('$gesture padbutton id = ${[button.index]}');
     }
   }
 
   double _calculatePositionXOfButton(
       int index, double innerCircleSize, double actualSize) {
-    double degrees = 360 / buttons!.length * index;
-    double lastAngleRadians = (degrees) * (_math.pi / 180.0);
+    double? degrees = 360 / buttons!.length * index;
+    double? lastAngleRadians = (degrees) * (_math.pi / 180.0);
 
     var rBig = actualSize / 2;
     var rSmall = (innerCircleSize + 2 * buttonsPadding!) / 2;
@@ -169,8 +167,8 @@ class PadbuttonsView extends StatelessWidget {
 
   double _calculatePositionYOfButton(
       int index, double innerCircleSize, double actualSize) {
-    double degrees = 360 / buttons!.length * index;
-    double lastAngleRadians = (degrees) * (_math.pi / 180.0);
+    double? degrees = 360 / buttons!.length * index;
+    double? lastAngleRadians = (degrees) * (_math.pi / 180.0);
     var rBig = actualSize / 2;
     var rSmall = (innerCircleSize + 2 * buttonsPadding!) / 2;
 
