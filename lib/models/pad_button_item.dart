@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'gestures.dart';
 
@@ -40,6 +39,6 @@ class PadButtonItem {
     this.buttonIcon,
     this.backgroundColor = Colors.white54,
     this.pressedColor = Colors.lightBlueAccent,
-    this.supportedGestures = const [Gestures.TAP],
+    this.supportedGestures = const [Gestures.tap],
   }) : assert(index != null);
 }

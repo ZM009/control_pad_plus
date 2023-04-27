@@ -35,6 +35,7 @@ class PadbuttonsView extends StatelessWidget {
   final Color? backgroundPadButtonsColor;
 
   PadbuttonsView({
+    super.key,
     this.size,
     this.buttons = const [
       PadButtonItem(index: 0, buttonText: 'A'),
@@ -46,6 +47,7 @@ class PadbuttonsView extends StatelessWidget {
     this.buttonsPadding = 0,
     this.backgroundPadButtonsColor = Colors.transparent,
   }) : assert(buttons != null && buttons.isNotEmpty) {
+    // ignore: avoid_function_literals_in_foreach_calls
     buttons!.forEach(
         (button) => buttonsStateMap![button.index!] = button.backgroundColor!);
   }

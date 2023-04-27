@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class CircleView extends StatelessWidget {
   final double? size;
@@ -13,7 +12,8 @@ class CircleView extends StatelessWidget {
   final Icon? buttonIcon;
   final String? buttonText;
 
-  CircleView({
+  const CircleView({
+    super.key,
     this.size,
     this.color = Colors.transparent,
     this.boxShadow,
@@ -56,7 +56,7 @@ class CircleView extends StatelessWidget {
           width: 4.0,
           style: BorderStyle.solid,
         ),
-        boxShadow: <BoxShadow>[
+        boxShadow: const <BoxShadow>[
           BoxShadow(
             color: Colors.black12,
             spreadRadius: 8.0,
@@ -74,7 +74,7 @@ class CircleView extends StatelessWidget {
           width: 2.0,
           style: BorderStyle.solid,
         ),
-        boxShadow: <BoxShadow>[
+        boxShadow: const <BoxShadow>[
           BoxShadow(
             color: Colors.black12,
             spreadRadius: 8.0,
@@ -122,7 +122,7 @@ class CircleView extends StatelessWidget {
           width: 2.0,
           style: BorderStyle.solid,
         ),
-        boxShadow: <BoxShadow>[
+        boxShadow: const <BoxShadow>[
           BoxShadow(
             color: Colors.black12,
             spreadRadius: 8.0,
