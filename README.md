@@ -22,7 +22,6 @@ A null safe version of the [control_pad](https://github.com/artur-ios-dev/flutte
 ✅ Customizable Callback Intervals <br>
 ✅ Null Safe <br>
 
-## IGNORE BELOW UNTIL PACKAGE IS FULLY TESTED AND RELEASED
 ## Getting started
 
 To get started with this package:
