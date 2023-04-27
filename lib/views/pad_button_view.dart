@@ -5,7 +5,6 @@ import 'dart:math' as _math;
 import 'package:control_pad_plus/models/gestures.dart';
 import 'package:control_pad_plus/models/pad_button_item.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import 'circle_view.dart';
 
