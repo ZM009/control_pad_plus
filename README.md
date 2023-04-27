@@ -21,7 +21,6 @@ A null safe version of the [control_pad](https://github.com/artur-ios-dev/flutte
 ✅ Gamepad-like Button View <br>
 ✅ Customizable Callback Intervals <br>
 ✅ Null Safe <br>
-- [ ] Example Implementation Project (W.I.P -- will add release after example is finished)<br> 
 
 ## IGNORE BELOW UNTIL PACKAGE IS FULLY TESTED AND RELEASED
 ## Getting started
