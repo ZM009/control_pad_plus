@@ -6,3 +6,7 @@
 * Alternate Gamepad-like view with 4 pressable buttons
 * Customizable color options
 * Supports null-safety
+
+## 0.0.2
+
+Updated JoystickView, and implemented example
