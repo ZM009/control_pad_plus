@@ -1,3 +1,4 @@
+//ignore_for_file: prefer_const_constructors, no_leading_underscores_for_local_identifiers
 //ignore: no_leading_underscores_for_library_prefixes
 import 'dart:math' as _math;
 
@@ -57,9 +58,10 @@ class JoystickView extends StatelessWidget {
   ///
   /// Defaults to [true]
   final bool showArrows;
-
+// ignore: prefer_const_constructors_in_immutables
   JoystickView(
-      {this.size,
+      {super.key,
+      this.size,
       this.iconsColor = Colors.white54,
       this.backgroundColor = Colors.blueGrey,
       this.innerCircleColor = Colors.blueGrey,
