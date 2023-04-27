@@ -11,29 +11,53 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+# control_pad_plus
+
+A null safe version of the [control_pad](https://github.com/artur-ios-dev/flutter_control_pad) package, developed by artur-ios-dev.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+✅ Joystick Controller <br>
+✅ Gamepad-like Button View <br>
+✅ Customizable Callback Intervals <br>
+✅ Null Safe <br>
+
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To get started with this package:
+
+Run ```flutter pub add control_pad_plus``` to add the package to pubspec.yaml _(latest version)_ <br><br>
+Run ```flutter pub get``` to "get" all dependencies in pubspec.yaml <br><br>
+To import the package for use in your program:
+```dart
+import 'package:control_pad_plus/control_pad_plus.dart';
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+A short example homepage containing the Joystick
 
 ```dart
-const like = 'sample';
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Joystick Controller Example'),
+      ),
+      body: Container(
+        color: Colors.red,
+        child: JoystickView(),
+      ),
+    );
+  }
+}
 ```
+
+
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+More general information about this package can be found from the __legacy package__ [here](https://pub.dev/packages/control_pad/versions). If any issues relating to the null safety migration arise, feel free to open a _bug_ issue so it can be looked into. <br><br>
+Otherwise, as a __general disclaimer__: This package was migrated/created for my project, and that is what the example is based on, so this package _may not_ be maintained anymore after May-June 2023 (my graduation) _unless_ it gains traction or there are glaring issues to be addressed.
