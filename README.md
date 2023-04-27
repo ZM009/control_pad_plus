@@ -23,7 +23,7 @@ A null safe version of the [control_pad](https://github.com/artur-ios-dev/flutte
 ✅ Null Safe <br>
 - [ ] Example Implementation Project (W.I.P -- will add release after example is finished)<br> 
 
-__IGNORE BELOW UNTIL PACKAGE IS FULLY TESTED AND RELEASED__
+## IGNORE BELOW UNTIL PACKAGE IS FULLY TESTED AND RELEASED
 ## Getting started
 
 To get started with this package:
