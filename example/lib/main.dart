@@ -12,7 +12,7 @@ class JoystickExample extends StatelessWidget {
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return MaterialApp(
-      home: const MyHomePage(),
+      home: MyHomePage(),
     );
   }
 }

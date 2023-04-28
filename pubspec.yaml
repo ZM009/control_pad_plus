@@ -1,6 +1,6 @@
 name: control_pad_plus
 description: A null safe version of the control_pad package, which allows for the user to implement a joystick or control pad with 4 different button functionalities. The target of this package is to assist with the remote control of an Arduino robot using a virtual joystick.
-version: 0.0.3
+version: 0.1.0
 homepage: https://github.com/ZM009/control_pad_plus
 
 environment:
