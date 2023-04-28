@@ -72,6 +72,12 @@ class JoystickView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    /// instead of the ?: comparison to check and set the value of [actualSize]
+    /// the ?? null checking method is used to follow dart conventions when dealing
+    /// with nullable types.
+    ///
+    /// if [size] is not null, asign it to [actualSize] otherwise assign the minimum size
+    /// (width or height, using the [MediaQuery] class) to [actualSize] of the Joystick widget.
     double? actualSize = size ??
         _math.min(MediaQuery.of(context).size.width,
                 MediaQuery.of(context).size.height) *
@@ -233,6 +239,10 @@ class JoystickView extends StatelessWidget {
     return true;
   }
 
+  /// Calculates the position of the inner circle when it is moved by gestures.
+  ///
+  /// Returns a 2D floating point offset of xPosition and yPosition based off the
+  /// [lastPosition] of the inner circle.
   Offset _calculatePositionOfInnerCircle(
       Offset lastPosition, double innerCircleSize, double size, Offset offset) {
     double? middle = size / 2.0;

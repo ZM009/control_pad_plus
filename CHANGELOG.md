@@ -10,3 +10,7 @@
 ## 0.0.2
 
 Updated JoystickView, and implemented example
+
+## 0.0.3
+
+Updated files to adhere to Dart Conventions and added more doc strings
